@@ -1,0 +1,5 @@
+from alpine
+run apk update && apk add busybox
+
+# I'm not really sure but with this we can `docker run -it <imageName>` and get a shell, and the container stays up
+cmd busybox sh

@@ -1,45 +1,8 @@
 #!/bin/bash
-
-sudo apt install terminator
-
-# Launch terminator
-
-# Installations
-sudo apt update
-
-# GNS3
-sudo add-apt-repository ppa:gns3/ppa
-sudo apt install gns3-gui
-
-# Docker
-sudo apt install docker.io
-
-# Check existing docker containers
 docker ps
-
-# Permission error fix
-sudo usermod -a -G docker badass
-reboot
-
-docker ps
-
-# No containers
-
-# Pull alpine and frr images
-docker pull alpine
-docker pull frrouting/frr
-
-# Check available images :
-docker images
-
-# We should see alpine and frrouting/frr
-
-docker ps
-
 # No docker container launched
 
 # Creation of alpine image :
-
 docker run -it alpine
 
 # Split term in two

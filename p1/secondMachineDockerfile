@@ -1,0 +1,4 @@
+from alpine
+run apk update && apk add busybox quagga
+
+cmd busybox sh

@@ -16,6 +16,3 @@ sudo apt install terminator -y
 sudo apt install docker.io -y
 docker pull alpine
 docker pull frrouting/frr
-
-# GNS3
-sudo apt install gns3 -y

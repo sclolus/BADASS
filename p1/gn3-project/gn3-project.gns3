@@ -63,7 +63,7 @@
             },
             {
                 "compute_id": "local",
-                "console": 5006,
+                "console": 5000,
                 "console_auto_start": false,
                 "console_type": "telnet",
                 "custom_adapters": [],
@@ -78,18 +78,18 @@
                 },
                 "locked": false,
                 "name": "routeur_sclolus-1",
-                "node_id": "2012d65b-fe75-4ab5-93e0-46ddce82539a",
+                "node_id": "fe6c986b-4660-4dc3-82b6-52b8c1e3f23b",
                 "node_type": "docker",
                 "port_name_format": "Ethernet{0}",
                 "port_segment_size": 0,
                 "properties": {
                     "adapters": 1,
-                    "aux": 5007,
+                    "aux": 5001,
                     "console_http_path": "/",
                     "console_http_port": 80,
                     "console_resolution": "1024x768",
-                    "container_id": "e1ec88d47ba57429747306968ade3423a1c3115f4f45d514109c68bb9b59c7b0",
-                    "environment": null,
+                    "container_id": "2d2a4cbd281cc0de8f966aee44685958b53cd3922e8aa9777be917937d8fd6d1",
+                    "environment": "\n",
                     "extra_hosts": null,
                     "extra_volumes": [],
                     "image": "secondmachine:latest",
@@ -97,10 +97,10 @@
                     "usage": ""
                 },
                 "symbol": ":/symbols/docker_guest.svg",
-                "template_id": "418c9608-e588-4eec-83ed-39f0f0500682",
+                "template_id": "7db49f60-e670-49b6-97bd-b9dbe44fced4",
                 "width": 65,
-                "x": -584,
-                "y": -353,
+                "x": 5,
+                "y": -351,
                 "z": 1
             }
         ]

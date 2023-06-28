@@ -2,36 +2,25 @@
 # THIS FILE IS A WALKTHROUGH RESOLUTION OF P1.
 # IT IS NOT MEANT TO BE EXECUTED DIRECTLY.
 
-docker ps
-# No docker container launched
+# The first part of the subject will require the creation of two virtual
+# machines, implemented as docker images. The first machine must be based on
+# an alpine image and have at least busybox installed. We already have pulled
+# the alpine image during the Vagrant vm installation, and uploaded a DockerFile
+# written to build our new alpine based image :
+
+docker build -f /vagrant/p1/firstMachineDockerfile -t first_machine .
+
+# The second machine must have a packet routing manager (quagga or zebra), have
+# BGPD and OSPFD services active and configured, an IS-IS routing engine service
+# installed, and busybox or equivalent. We also uploaded a DockerFile for this
+# image, which will base on frrouting/frr image, because it already has BGPD,
+# OSPFD, and IS-IS routing engine built-in.
 
 # Creation of alpine image :
-docker run -it alpine
-
-# Split term in two
-# Run uname -a in alpine
-# Run docker ps in the ubuntu shell
-# Check if the container ID matches
-
-# Install busybox in alpine
-apk add busybox
-
-# Commit alpine based container in a new image :
-docker commit [container_name] alpine_image
-docker stop [container_name]
-docker images
+docker build -f /vagrant/p1/secondMachineDockerfile -t second_machine .
 
 # We should see our newly created image
+docker images
 
-# Creation of frrouting image :
-
-# Run frr image :
-docker run -d frrouting/frr
-
-# Get container name
-docker ps
-
-# Connect to it via terminal
-docker exec -it [container_name] sh
-
-apk add busybox
+# We can now launch gns3 on our machine to realize the diagram asked in the subject :
+gns3

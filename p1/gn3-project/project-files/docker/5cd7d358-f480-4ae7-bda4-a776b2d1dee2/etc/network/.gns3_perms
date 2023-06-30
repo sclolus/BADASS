@@ -1,0 +1,8 @@
+755:1000:998:/etc/network/if-post-down.d
+644:1000:998:/etc/network/interfaces
+644:1000:998:/etc/network/.gns3_perms
+755:1000:998:/etc/network/if-down.d
+755:1000:998:/etc/network/interfaces.d
+755:1000:998:/etc/network/if-pre-up.d
+755:1000:998:/etc/network/if-up.d
+755:1000:998:/etc/network

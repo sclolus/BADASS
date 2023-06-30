@@ -1,4 +1,5 @@
-from alpine
-run apk update && apk add busybox quagga
-
-cmd busybox sh
+from frrouting/frr
+run apk update && apk add busybox
+copy ./scripts/configure_frr.sh /
+copy ./confs/daemons /etc/frr/daemons
+run bash /configure_frr.sh
